@@ -1,0 +1,35 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.container{
+    background-color: orange;
+    width: 100%;
+    height: 100%;
+}
+.play{
+    color: blue;
+    font-weight: 900;
+    font-family: sofia;
+    background-image: url('selena.jpg') no-repeat;
+    display: flex;
+}
+h1,h4,p{
+    color: blue;
+    font-weight: 900;
+    font-family: sofia;
+    padding: 0 20px;
+}
+ul{
+    display: block;
+    padding: 0 0 0 60%;
+}
+ul li{
+    display: inline-block;
+    line-height: 50px;
+}
+ul li a{
+    text-decoration-line: none;
+    padding: 0 20px;
+    line-height: 25px;
+}

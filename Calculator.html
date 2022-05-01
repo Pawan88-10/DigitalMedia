@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  	<title>Snake Game</title>
+  	<meta http-equiv="Content-Type" content="text/html;charset=windows-1251">
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="">
+   <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body{
+      background-color: aqua;
+    }
+    .handle{
+      background-color: dodgerblue;
+      /*max-width: 90%;*/
+      min-height: 80%;
+      margin: 100px 30%;
+     border-radius: 20px;
+    }
+    header{
+      color: #c2d992;
+      /*border: 1px solid #f3f2f1;*/
+      text-align: center;
+      font-weight: 1000;
+      font-size: 34px;
+      margin: 10px;
+    }
+    #screen{
+      margin: 10px 125px;
+      height: 40px;
+      width: 300px;
+      min-width: 60%;
+      background-color: #c2a9b7;
+      border: 1px solid black;
+      color: red;
+      /* here is not acceptable padding dint of large padding and it's not show any output from javascript, we must make low padding*/
+      padding: 0 10px;
+      float: left;
+      direction: ltr;
+    }
+    table{
+      width: 50%;
+      align-items: center;
+      margin: 1rem 11rem;
+      border-color: none;
+    }
+    #first{
+      color: red;
+      width: 25%;
+      margin: 20px;
+    }
+    .one{
+      color: red;
+      padding: 5px 15px;
+      margin: 5px;
+      border-radius: 5px;
+    }
+    .two{
+      color: red;
+      padding: 5px 15px;
+      margin: 5px;
+      border-radius: 5px;
+    }
+    .three{
+         color: black;
+         padding: 5px 15px;
+         margin: 5px;
+         border-radius: 5px;
+       }
+    .four{
+         color: black;
+         padding: 5px 15px;
+         margin: 5px;
+         border-radius: 5px;
+       }
+    .five{
+         color: black;
+         padding: 5px 15px;
+         margin: 5px;
+         border-radius: 5px;
+       }
+     .six{
+            color: purple;
+            padding: 5px 15px;
+            margin: 5px 1px;
+            border-radius: 5px;
+          }
+     .ano{
+       /*display: none;*/
+       visibility: hidden;
+       color: purple;
+       padding: 5px 15px;
+       margin: 5px 1px;
+       border-radius: 5px;
+     }
+     @media only screen and (min-width:400px) and (max-width:1200px)and (-webkit-min-device-pixel-ratio: 2){
+     header{
+       color: red;
+       padding: 20px 0 0 0;
+     }
+     #screen{
+      margin: 10px 28px;
+      height: 40px;
+      width: 245px;
+      min-width: 50%;
+      background-color: #c2b9b7;
+      border: 1px solid black;
+      color: red;
+      padding: 0 50px;
+      display: block;
+      margin: 20px 25%;
+      direction: ltr;
+      align-items: center;
+    }
+    .one{
+      color: red;
+      padding: 5px 15px;
+      margin: 5px;
+      border-radius: 5px;
+    }
+    .two{
+      padding: 5px 15px;
+      margin: 5px;
+      border-radius: 5px;
+      color: hotpink;
+    }
+    .three{
+         padding: 5px 15px;
+         margin: 5px;
+         border-radius: 5px;
+         color: brown;
+       }
+    .four{
+         padding: 5px 15px;
+         margin: 5px;
+         border-radius: 5px;
+         color: purple;
+       }
+    .five{
+         padding: 5px 15px;
+         margin: 5px;
+         border-radius: 5px;
+         color: blueviolet;
+       }
+     .six{
+            padding: 5px 15px;
+            margin: 5px 1px;
+            border-radius: 5px;
+            color: green;
+          }
+     .ano{
+       visibility: visible;
+       color: darkblue;
+       padding: 5px 20px;
+       margin: 5px 5px;
+       border-radius: 5px;
+     }
+      
+     #first #second #third #fourth, #fifth #six{
+       align-items: center;
+       display:block;
+       margin: auto;
+       padding: auto;
+       width: auto;
+     }
+     table{
+      width: 50%;
+      align-items: center;
+      margin: 2rem 11rem;
+      border-color: none;
+     }
+    .handle{
+      background-color: dodgerblue;
+      /*max-width: 90%;*/
+      min-height: 50%;
+      margin: 23px 46px;
+      border-radius: 20px;
+      height: 430px;
+    }
+     }
+   </style>
+  </head>
+
+  <body>
+    <div class="handle">
+    <header>
+      Calculator
+    </header>
+    <div>
+      <input id="screen" type="text">
+    </div>
+    <table id="alltab">
+      <tr id="first">
+        <td><button class="one">Del</button></td>
+        <th><button class="one">Pow</button></th>
+        <th><button class="one">Ins</button></th>
+        <th><button class="one">(</button></th>
+        <th><button style="padding: 5px 16px;"class="ano">Sin</button></th>
+        <th><button style="padding: 5px 16px;" class="ano">Cos</button></th>
+        <th><button style="padding: 5px 16px;" class="ano">Tan</button></th>
+        <th><button style="padding: 5px 16px;" class="ano">Cot</button></th>
+        <th><button style="padding: 5px 16px;" class="ano">Sec</button></th>
+        <th><button style="padding: 5px 10px;"class="ano">Cosec</button></th>
+      </tr>
+      <tr id="second">
+        <td><button class="two">)</button></td>
+        <th><button class="two">[</button></th>
+        <th><button class="two">]</button></th>
+        <th><button  class="two"><bold style="font-weight:1000; text-align: center;">.</bold></button></th>
+         <th><button style="padding: 5px 10px;" class="ano">Sin<sup>-1</sup></button></th>
+        <th><button style="padding: 5px 10px;" class="ano">Cos<sup>-1</sup></button></th>
+        <th><button style="padding: 5px 10px" class="ano">Tan<sup>-1</sup></button></th>
+        <th><button style="padding: 5px 10px" class="ano">Cot <sup>-1</sup></button></th>
+        <th><button style="padding: 5px 10px" class="ano">Sec<sup>-1</sup></button></th>
+        <th><button style="padding: 5px 5px" class="ano">Cosec<sup>-1</sup></button></th>
+      </tr>
+      <tr id="third">
+        <td><button class="three" >9</button></td>
+        <th><button class="three">8</button></th>
+        <th><button class="three">7</button></th>
+        <th><button class="three">+</button></th>
+         <th><button style="padding: 5px 10px;" class="ano"><sub>`</sub>/<sup>--</sup></button></th>
+         <th><button class="ano">!</button></th>
+         <th><button class="ano">^</button></th>
+         <th><button class="ano">pi</button></th>
+         <th><button class="ano">%</button></th>
+         <th><button class="ano">~</button></th>
+      </tr>
+        <tr id="fourth">
+          <td><button class="four">6</button></td>
+          <th><button class="four">5</button></th>
+          <th><button class="four">4</button></th>
+          <th><button class="four">-</button></th>
+           <th><button class="ano">$</button></th>
+           <th><button class="ano">&</button></th>
+           <th><button class="ano">?</button></th>
+           <th><button class="ano">:</button></th>
+           <th><button class="ano">;</button></th>
+           <th><button class="ano">"</button></th>
+        </tr>
+         <tr id="fifth">
+           <td><button class="five">3</button></td>
+           <th><button class="five">2</button></th>
+           <th><button class="five">1</button></th>
+           <th><button class="five">x</button></th>
+            <th><button class="ano">#</button></th>
+            <th><button class="ano">@</button></th>
+            <th><button class="ano">|</button></th>
+            <th><button style="padding: 5px 6px;" class="ano">triangle</button></th>
+            <th><button style="padding: 5px 15px;" class="ano">rect</button></th>
+            <th><button style="padding: 5px 8px;" class="ano">square</button></th>
+         </tr>
+          <tr id="sixth">
+            <td><button class="six">CLSR</button></td>
+            <th><button class="six">0</button></th>
+            <th><button class="six">=</button></th>
+            <th><button class="six">/</button></th>
+             <th><button class="ano"><sup>o</sup></button></th>
+             <th><button style="padding: 5px 10px;" class="ano">radian</button></th>
+             <th><button class="ano">k</button></th>
+             <th><button class="ano">in</button></th>
+             <th><button class="ano">u</button></th>
+             <th><button class="ano">™</button></th>
+          </tr>
+    </table>
+    <script>
+    /* JS having most three value = (e) function and target by it to button as e.target.innerText and here innerText is a text of button in which has written   */
+    /*JS having second value = inputkiid.value here .value show text when pressed Burton's text*/
+    /*JS having third value = eval it's mean evaluate the expressions in hindi iska matalab h ki hum isse jo value screen par show karenge use ye customise karega matalab saare button ko control karega*/
+     var screen = document.getElementById("screen");
+     var buttons = document.querySelectorAll('button');
+     let screenValue = '';
+     for(item of buttons){
+       item.addEventListener('click', (e)=>{
+         button_text = e.target.innerText; 
+         console.log(button_text);
+         if(button_text == 'x'){
+           button_text = '*';
+           screenValue += button_text;
+           screen.value = screenValue;
+         }
+         else if(button_text == 'Del'){
+           screen.value = '';
+           screenValue = screen.value;
+         }
+         else if(button_text == '='){
+           screen.value = eval(screenValue);
+          // screenValue = screen.value;
+         }
+         else if (button_text == 'Pow') {
+           button_text = '**';
+           screen.value = screenValue;
+           screenValue += button_text;
+           document.write(error)
+         }
+         else if (button_text == 'Ins') {
+           button_text = '* 1.44';
+           screen.value = screenValue;
+           screenValue += button_text;
+         }
+         else if (button_text == 'CLSR') { 
+           button_text = '';
+           screen.value = screenValue;
+           screenValue = button_text;
+         }
+         else if (button_text == 'radian') {
+           button_text = '*0.0175';
+           screen.value = screenValue;
+           screenValue += button_text;
+         }
+         else if (button_text == 'o') {
+           button_text = '*57.296';
+           screen.value = screenValue;
+           screenValue += button_text;
+         }
+         else if (button_text == 'Sin') {
+           button_text = '*0.017';
+           screen.value = screenValue;
+           screenValue += button_text;
+          
+         }
+         else if (button_text == 'Cos') {
+           button_text = '*0.999';
+           screen.value = screenValue;
+           screenValue += button_text;
+         
+         }
+         else if (button_text == 'Tan') {
+           button_text = '*0.01765';
+           screen.value = screenValue;
+           screenValue += button_text;
+         
+         }
+         else{
+           /*here else has held by dint of showable value when we press the button otherwise won't show any button text on screen*/
+           screen.value += button_text;
+           screenValue = screen.value;
+         }
+      }
+     )
+    }
+      
+    </script>
+  </body>
+</html>

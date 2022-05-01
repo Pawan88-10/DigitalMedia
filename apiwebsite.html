@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width= , initial-scale=1.0">
+    <title>Api Coding</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .navbar{
+            display: flex;
+            flex-direction: row;
+            /* justify-content: space-between; */
+        }
+        .nav{
+            display: flex;
+        }
+        .nav h1{
+            color: brown;
+            text-size-adjust: 100%;
+            font-size: medium;
+            
+            line-height: 30px;
+            
+        }
+        .nav ul{
+            display:flex;
+            padding: 0 0 0 25pc;
+            line-height: 25px;
+            
+        }
+        .nav ul li{
+          display: inline; 
+        }
+        .nav ul a{
+            color: blue;
+            font-weight: 900;
+            text-align: center;
+            line-height: 25px;
+            padding: 2px 5px;
+            text-decoration-line: none;
+        }
+        .icon{
+            display: none;
+        }
+        @media only screen and (max-width: 600px) {
+            .nav h1{
+            color: brown;
+            display: flex;  text-size-adjust: 100%;
+            width: 100%;
+            font-size: medium;
+            line-height: 30px;
+           
+            
+        }
+        .nav ul a{
+            /* background-color: aliceblue; */
+            max-height: 100%;
+            width: 50%;
+            padding: 10px 20px;
+            display:block ;
+            visibility: hidden;
+        }
+        .icon{
+            
+        }
+        .nav ul{
+          display: block; 
+          padding: 0 0 10rem;
+          margin: 0 2px;
+          padding: 20px 200px 40% 50px;
+          
+        }
+        .nav{
+            display: flex;
+            background-color: aqua;
+        }
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="nav">
+            <h1><i></i>video</h1>
+            <ul class="task">
+                <li><a href="#">home</a></li>
+                <li><a href="#">picture</a></li>
+                <li><a href="#">overview</a></li>
+                <li><a href="#">search</a></li>
+            </ul>
+            <div class="icon">
+              <a href="#"><i class="fa fa-bars" aria-hidden="true"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="heading">
+        <h1>welcome in my api coding</h1>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus et at quasi, vitae repudiandae quibusdam maxime veritatis laudantium odio nihil magnam dignissimos excepturi amet pariatur? Numquam distinctio, optio perferendis temporibus nesciunt facere!</p>
+        <img src="" alt="api">
+    </div>
+</body>
+</html>

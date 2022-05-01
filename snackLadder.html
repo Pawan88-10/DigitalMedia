@@ -1,0 +1,220 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>Fload Image Around Image WIth Box Shadow and Border</title>
+	<link rel="stylesheet" href="bunjee.css" />
+	<style>
+		*
+{
+	padding:0;
+	margin:0;
+}
+@keyframes  myHeading{
+	0%{
+		color: brown;
+	}
+	20%{
+		color: palegoldenrod;
+	}
+	40%{
+		color: red;
+	}
+	60%{
+		color: rebeccapurple;
+	}
+	80%{
+		color: slateblue;
+	}
+	0%{
+		color: yellow;
+	}
+}
+.head{
+	animation-name: myHeading;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+	touch-action: double-tap-zoom;
+	padding: 10px 0 40px;
+	text-align: center;
+}
+.container
+{
+	padding:30px;
+	font-family:'Roboto';
+	font-size:16px;
+	font-weight:300;
+	line-height:24px;
+}
+.container p
+{
+	margin-bottom:15px;
+}
+
+
+.thumbanail
+{
+	width:450px;
+	position:relative;
+	box-shadow:0 0 5px rgba(0,0,0,.4);
+	background-color:#fff;
+	overflow:hidden;
+	border-radius:8px;
+	margin-bottom:10px;
+}
+.thumbanail:before
+{
+	content:'';
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	border:8px solid #fff;
+	z-index:2;
+	overflow:hidden;
+	box-sizing:border-box;
+}
+.thumbanail img
+{
+	width:100%;
+	height:auto;
+	border-radius:8px;
+	transform:scale(1) rotate(0deg);
+	transition:all .5s linear;
+}
+.thumbanail:hover img
+{
+	transform:scale(1.1) rotate(-5deg);
+}
+
+
+.thumbanail.right
+{
+	float:right;
+	margin-left:20px;
+}
+.thumbanail.left
+{
+	float:left;
+	margin-right:20px;
+}
+#btn{
+	color: royalblue;
+	border: 1px solid black;
+	border-radius: 35px;
+	background-color: black;
+	align-items: center;
+	padding: 10px 15px;
+	outline: hidden;
+	margin: 10% 45%;
+}
+
+@media screen and (max-width:767px)
+{
+	
+	.thumbanail.right
+	{
+		float:none;
+		margin-left:0px;
+	}
+	.thumbanail.left
+	{
+		float:none;
+		margin-right:0px;
+	}
+	.thumbanail{
+		width:100%;
+	}
+}
+
+#btnText{
+	color: #fff;
+}
+
+
+
+	</style>
+</head>
+<body>
+
+	<div class="container">
+		<div class="head">
+			<h1>Snakes and ladders</h1>
+		</div>
+		
+		<div class="thumbanail right">
+			<img src="snack_01.jpeg" alt="" />
+		</div>
+		
+		<h4>Snakes and ladders</h4>
+		<p>
+			Snakes and ladders is a board game for two or more players regarded today as a worldwide classic.[1] The game originated in ancient India as Moksha Patam, and was brought to the UK in the 1890s. It is played on a game board with numbered, gridded squares. A number of "ladders" and "snakes" are pictured on the board, each connecting two specific board squares. The object of the game is to navigate one's game piece, according to die rolls, from the start (bottom square) to the finish (top square), helped by climbing ladders but hindered by falling down snakes.
+		</p>
+		<p>
+			Snakes and ladders originated as part of a family of Indian dice board games that included gyan chauper and pachisi (known in English as Ludo and Parcheesi). It made its way to England and was sold as "Snakes and Ladders",[4] then the basic concept was introduced in the United States as Chutes and Ladders.[5]
+
+
+Gyan chaupar (Jain version of the game), National Museum, New Delhi
+Gyan chauper/jnan chauper (game of wisdom), the version associated with the Jain philosophy,[6] encompassed the concepts like karma and Moksha.
+
+The game was popular in ancient India by the name Moksha Patam. It was also associated with traditional Hindu philosophy contrasting karma and kama, or destiny and desire. It emphasized destiny, as opposed to games such as pachisi, which focused on life as a mixture of skill (free will)[7] and luck. The underlying ideals of the game inspired a version introduced in Victorian England in 1892. The game has also been interpreted and used as a tool for teaching the effects of good deeds versus bad. The board was covered with symbolic images, the top featuring gods, angels, and majestic beings, while the rest of the board was covered with pictures of animals, flowers and people.[8] The ladders represented virtues such as generosity, faith, and humility, while the snakes represented vices such as lust, anger, murder, and theft. The morality lesson of the game was that a person can attain salvation (Moksha) through doing good, whereas by doing evil one will be reborn as lower forms of life. The number of ladders was less than the number of snakes as a reminder that a path of good is much more difficult to tread than a path of sins. Presumably, reaching the last square (number 100) represented the attainment of Moksha (spiritual liberation).
+
+A version popular in the Muslim world is known as shatranj al-'urafa and exists in various versions in India, Iran, and Turkey. In this version, based on sufi philosophy, the game represents the dervish's quest to leave behind the trappings of worldly life and achieve union with God.[9]
+
+When the game was brought to England, the Indian virtues and vices were replaced by English ones in hopes of better reflecting Victorian doctrines of morality. Squares of Fulfilment, Grace and Success were accessible by ladders of Thrift, Penitence and Industry and snakes of Indulgence, Disobedience and Indolence caused one to end up in Illness, Disgrace and Poverty. While the Indian version of the game had snakes outnumbering ladders, the English counterpart was more forgiving as it contained equal numbers of each.[10]
+
+The association of Britain's snakes and ladders with India and gyan chauper began with the returning of colonial families from India during the British Raj. The décor and art of the early English boards of the 20th century reflect this relationship. By the 1940s very few pictorial references to Indian culture remained, due to the economic demands of the war and the collapse of British rule in India.[11] Although the game's sense of morality has lasted through the game's generations, the physical allusions to religious and philosophical thought in the game as presented in Indian models appear to have all but faded. There has even been evidence of a possible Buddhist version of the game existing in India during the Pala-Sena time period.
+
+In Andhra Pradesh, this game is popularly called Vaikunthapali or Paramapada Sopana Patam (the ladder to salvation) in Telugu.[5][11] In Hindi, this game is called Saanp aur Seedhi, Saanp Seedhi and Mokshapat. In Tamil Nadu the game is called Parama padam and is often played by devotees of Hindu god Vishnu during the Vaikuntha Ekadashi festival in order to stay awake during the night. In Bengali-speaking regions, West Bengal in India and Bangladesh, it is known as Shap Shiri or Shapludu respectively.[12]
+
+In the original game the squares of virtue are: Faith (12), Reliability (51), Generosity (57), Knowledge (76), and Asceticism (78). The squares of vice or evil are: Disobedience (41), Vanity (44), Vulgarity (49), Theft (52), Lying (58), Drunkenness (62), Debt (69), Murder (73), Rage (84), Greed (92), Pride (95), and Lust (99).
+		</p>
+		
+		<div class="thumbanail left">
+			<img src="snack_02.jfif" alt="" />
+		</div>
+		
+		
+		<h4>Specific edition</h4>
+		<p>
+			The most widely known edition of snakes and ladders in the United States is Chutes and Ladders, released by Milton Bradley in 1943.[14] The playground setting replaced the snakes, which were disliked by children at the time.[14] It is played on a 10x10 board, and players advance their pieces according to a spinner rather than a die. The theme of the board design is playground equipment, showing children climbing ladders and descending chutes.
+
+The artwork on the board teaches morality lessons: squares on the bottom of the ladders show a child doing a good or sensible deed, at the top of the ladder there is an image of the child enjoying the reward; squares at the top of the chutes show children engaging in mischievous or foolish behavior, on the bottom of the chute the image shows the children suffering the consequences.
+
+Black children were depicted in the Milton Bradley game for the first time in 1974.[14] There have been many pop culture versions of the game, with graphics featuring such children's television characters as Dora the Explorer and Sesame Street. It has been marketed as "The Classic Up and Down Game for Preschoolers". In 1999, Hasbro released Chutes and Ladders for PCs.
+
+In Canada the game has been traditionally sold as "Snakes and Ladders" and produced by the Canada Games Company. Several Canada-specific versions have been produced over the years, including a version with toboggan runs instead of snakes.[15]
+
+An early British version of the game depicts the path of a young boy and girl making their way through a cartoon railroad and train system.
+		</p>
+		<p>
+			Even though the concept of major virtues against vices and related Eastern spiritualism is not much emphasized in modern incarnations of the game, the central mechanism of snakes and ladders makes it an effective tool for teaching young children about various subjects. In two separate Indonesian schools, the implementation of the game as media in English lessons of fifth graders not only improved the students' vocabulary but also stimulated their interest and excitement about the learning process.[17][18] Researchers from Carnegie Mellon University found that pre-schoolers from low income backgrounds who played an hour of numerical board games like snakes and ladders matched the performance of their middle-class counterparts by showing improvements in counting and recognizing number shapes.[19] An eco-inspired version of the game was also used to teach students and teachers about climate change and environmental sustainability.
+		</p>
+
+		<div class="thumbanail left">
+			<img src="snack_03.jpg" alt="" />
+		</div>
+		
+		
+		<h4>Mathematics of the game</h4>
+		<p>
+            Any version of snakes and ladders can be represented exactly as an absorbing Markov chain, since from any square the odds of moving to any other square are fixed and independent of any previous game history.[24] The Milton Bradley version of Chutes and Ladders has 100 squares, with 19 chutes and ladders. A player will need an average of 39.2 spins to move from the starting point, which is off the board, to square 100. A two-player game is expected to end in 47.76 moves with a 50.9% chance of winning for the first player.[25] These calculations are based on a variant where throwing a six does not lead to an additional roll; and where the player must roll the exact number to reach square 100 and if they overshoot it their counter does not move.
+
+		</p>
+		<p>
+			The phrase "back to square one" originated in the game of snakes and ladders, or at least was influenced by it – the earliest attestation of the phrase refers to the game: "Withal he has the problem of maintaining the interest of the reader who is always being sent back to square one in a sort of intellectual game of snakes and ladders.
+		</p>
+		
+		<button id="btn" >Read More</button>
+		<p id="btnText"></p>
+	</div>
+	<script>
+		var btn = document.getElementById('btn');
+        var btnText = document.getElementById('btntext')
+		btn.addEventListener('click', function myFunction(){
+			window.alert( btnText = document.getElementById('btnText').innerText="This is not updating so please wait for days because we add more option put here on time(15-05-22)");
+		});
+	</script>
+</body>
+</html>

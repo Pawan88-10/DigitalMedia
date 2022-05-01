@@ -1,0 +1,202 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>Fload Image Around Image WIth Box Shadow and Border</title>
+	<link rel="stylesheet" href="bunjee.css" />
+	<style>
+		*
+{
+	padding:0;
+	margin:0;
+}
+@keyframes  myHeading{
+	0%{
+		color: brown;
+	}
+	20%{
+		color: palegoldenrod;
+	}
+	40%{
+		color: red;
+	}
+	60%{
+		color: rebeccapurple;
+	}
+	80%{
+		color: slateblue;
+	}
+	0%{
+		color: yellow;
+	}
+}
+.head{
+	animation-name: myHeading;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+	touch-action: double-tap-zoom;
+	padding: 10px 0 40px;
+	text-align: center;
+}
+.container
+{
+	padding:30px;
+	font-family:'Roboto';
+	font-size:16px;
+	font-weight:300;
+	line-height:24px;
+}
+.container p
+{
+	margin-bottom:15px;
+}
+
+
+.thumbanail
+{
+	width:450px;
+	position:relative;
+	box-shadow:0 0 5px rgba(0,0,0,.4);
+	background-color:#fff;
+	overflow:hidden;
+	border-radius:8px;
+	margin-bottom:10px;
+}
+.thumbanail:before
+{
+	content:'';
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	border:8px solid #fff;
+	z-index:2;
+	overflow:hidden;
+	box-sizing:border-box;
+}
+.thumbanail img
+{
+	width:100%;
+	height:auto;
+	border-radius:8px;
+	transform:scale(1) rotate(0deg);
+	transition:all .5s linear;
+}
+.thumbanail:hover img
+{
+	transform:scale(1.1) rotate(-5deg);
+}
+
+
+.thumbanail.right
+{
+	float:right;
+	margin-left:20px;
+}
+.thumbanail.left
+{
+	float:left;
+	margin-right:20px;
+}
+#btn{
+	color: royalblue;
+	border: 1px solid black;
+	border-radius: 35px;
+	background-color: black;
+	align-items: center;
+	padding: 10px 15px;
+	outline: hidden;
+	margin: 10% 45%;
+}
+
+@media screen and (max-width:767px)
+{
+	
+	.thumbanail.right
+	{
+		float:none;
+		margin-left:0px;
+	}
+	.thumbanail.left
+	{
+		float:none;
+		margin-right:0px;
+	}
+	.thumbanail{
+		width:100%;
+	}
+}
+#btnText{
+	 color: #fff;
+ }
+
+
+
+
+	</style>
+</head>
+<body>
+
+	<div class="container">
+		<div class="head">
+			<h1>Bungee jumping</h1>
+		</div>
+		
+		<div class="thumbanail right">
+			<img src="bungee_01.jfif" alt="" />
+		</div>
+		
+		<h4>bungee jumping is a modern sport</h4>
+		<p>
+			The first modern bungee jumps were made on 1 April 1979 from the 250-foot (76 m) Clifton Suspension Bridge in Bristol, England, by David Kirke and Simon Keeling,[10] members of the Oxford University Dangerous Sports Club, and Geoff Tabin,[11] a professional climber who tied the ropes for the jump.[12] The students had come up with the idea after discussing the "vine jumping" ritual of Vanuatu.[11] The jumpers were arrested shortly after, but continued with jumps in the US from the Golden Gate Bridge and the Royal Gorge Bridge. The last jump was sponsored by and televised on the American programme That's Incredible, spreading the concept worldwide. By 1982, Kirk and Keelling were jumping from mobile cranes and hot air balloons.
+		</p>
+		<p>
+			Colorado climbers Mike Munger and Charlie Fowler may have bungee-jumped earlier in Eldorado Springs, CO in 1977. Both were cutting-edge alpinists, preparing for a trip to Monte Fitzroy in Patagonia by simulating long falls onto a springy, 150-foot nylon climbing rope. They scrambled up to a large tree at the top of the 700-foot wall, above a severely overhanging climb appropriately named "Diving Board", and tied one end of the rope into the tree. With a piece of flat seat belt webbing around his waist and some homemade leg loops, Mike tied into the other end of the rope and, after no small amount of trepidation, he jumped. He then ascended the rope mechanically to the tree and untied. Then Charlie tied in and jumped. The total fall was about 130 feet.	
+		</p>
+		
+		<div class="thumbanail left">
+			<img src="bungee_02.jpeg" alt="" />
+		</div>
+		
+		
+		<h4>The highest jump</h4>
+		<p>
+			In August 2005, AJ Hackett added a SkyJump to the Macau Tower, making it the world's highest jump at 233 metres (764 ft).[21] The SkyJump did not qualify as the world's highest bungee as it is not strictly speaking a bungee jump, but instead what is referred to as a 'Decelerator-Descent' jump, using a steel cable and decelerator system, rather than an elastic rope. On 17 December 2006, the Macau Tower started operating a proper bungee jump, which became the "Highest Commercial Bungee Jump in the World" according to the Guinness Book of Records. The Macau Tower Bungy has a "Guide cable" system that limits swing (the jump is very close to the structure of the tower itself) but does not have any effect on the speed of descent, so this still qualifies the jump for the World Record.
+		</p>
+		<p>
+			Kushma Bungee Jump is the world's second-highest bungee jump with a height of 228 Meters.[22] It is located in the George of Kaligandaki River and world-first natural canon bungee jump. Another commercial bungee jump currently in operation is just 13m smaller, at 220 metres (720 ft). This jump, made without guide ropes, is from the top of the Verzasca Dam near Locarno, Switzerland. It appears in the opening scene of the James Bond film GoldenEye. The Bloukrans Bridge Bungy in South Africa and the Verzasca Dam jumps are pure freefall swinging bungee from a single cord.
+
+Guinness only records jumps from fixed objects to guarantee the accuracy of the measurement. John Kockleman however recorded a 2,200-foot (670 m) bungee jump from a hot air balloon in California in 1989. In 1991 Andrew Salisbury jumped from 9,000 feet (2,700 m) from a helicopter over Cancun for a television program and with Reebok sponsorship. The full stretch was recorded at 3,157 feet (962 m). He landed safely under parachute.
+
+One commercial jump higher than all others is at the Royal Gorge Bridge in Colorado. The height of the platform is 321 metres (1,053 ft). However, this jump is rarely available, as part of the Royal Gorge Go Fast Games—first in 2005, then again in 2007. Previous to this the record was held in West Virginia, USA, by New Zealander Chris Allum, who bungee jumped 823 ft (251m) from the New River Gorge Bridge on "Bridge Day" 1992 to set a world's record for the longest bungee jump from a fixed structure.
+		</p>
+
+		<div class="thumbanail left">
+			<img src="bungee_03.jpg" alt="bungee" />
+		</div>
+		
+		
+		<h4>Risk of injury</h4>
+		<p>
+			Bungee jumping injuries may be divided into those that occur after jumping secondary to equipment mishap or tragic accident, and those that occur regardless of safety measures.
+
+In the first instance, injury can happen if the safety harness fails, the cord length is miscalculated,[27] or the cord is not properly connected to the jump platform. In 1986, a man died during rehearsals for a bungee jumping stunt on a BBC television programme, because the cord sprang loose from a carabiner clip.
+		</p>
+		<p>
+			Injuries that occur despite safety measures generally relate to the abrupt rise in upper body intravascular pressure during bungee cord recoil. Eyesight damage is the most frequently reported complication.[28][29][30][31][32] Impaired eyesight secondary to retinal
+			 haemorrhage may be transient[30] or take several weeks to resolve.[33] In one case, a 26-year-old woman's eyesight was still impaired after 7 months.[34] Whiplash injuries may occur as the jumper is jolted on the bungee cord and in at least one case, this has led to quadriplegia secondary to a broken neck. Very serious injury can also occur if the jumper's neck or body gets entangled in the cord.[35] More recently, carotid artery dissection leading to a type of stroke after bungee jumping has also been described.[36] All of these injuries have occurred in fit and healthy people in their twenties and thirties. Bungee jumping has also been shown to increase stress and decrease immune function.
+		</p>
+		
+		<button id="btn" >Read More</button>
+		<p id="btnText"></p>
+	</div>
+	<script>
+		var btn = document.getElementById('btn');
+        var btnText = document.getElementById('btntext')
+		btn.addEventListener('click', function myFunction(){
+			window.alert( btnText = document.getElementById('btnText').innerText="This is not updating so please wait for days because we add more option put here on time(15-05-22)");
+		});
+	</script>
+</body>
+</html>

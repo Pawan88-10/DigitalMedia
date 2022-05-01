@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DaD Jokes</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            
+        }
+        body{
+            background-color: aquamarine;
+        }
+        .body{
+            margin: 130px 300px;
+            background-color: black;
+            border-radius: 35px;
+            border-color: 1px solid blue;
+        }
+        .container{
+              padding: 150px;
+              margin: 50px;
+              /* color: burlywood; */
+        }
+        h3{
+            color: grey;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-weight: 1000;
+            padding: 0 50px;
+        }
+        @keyframes myAnimation{
+            0%{
+                color: blue;
+            }
+            20%{
+                color: wheat;
+            }
+            40%{
+                color: orangered;
+            }
+            60%{
+                color: palevioletred;
+            }
+            80%{
+                color: green;
+            }
+            100%{
+                color: slategrey;
+            }
+        }
+        #joke{
+             color: blueviolet;
+             font-family: Comic Sans MS;
+             padding: 20px 40px ;
+             margin: 8px 10px 0 ;
+             animation-name: myAnimation;
+             animation-duration: 2s;
+             animation-timing-function: ease-in-out;
+             animation-iteration-count: infinite;
+        }
+        #jokebtn{
+            padding: 10px 10px;
+            border-radius: 35px;
+            border-top-color: blueviolet;
+            border-bottom-color: red;
+            border-right-color: blueviolet;
+            border-left-color: red;
+            background-color: bisque;
+            margin: 10px 130px;
+            align-items: center;
+            outline: hidden;
+        }
+        @media only screen and (max-width:440px){
+            .body{
+            margin: 5px;
+            background-color: black;
+            border-top-left-radius: 125px;
+            border-bottom-right-radius: 125px;
+            border-color: 1px solid blue;
+        }
+        }
+    </style>
+</head>
+<body>
+    <div class="body">
+    <div class="container">
+      <h3>😄 Best Jokes to make your Day ⛲</h3>
+      <div id="joke" class="joke">
+          Awesome joke is loading..........
+      </div>
+      <button id="jokebtn" class="btn">Next Joke</button>
+    </div>
+    </div>
+    <script>
+        const jokes = document.querySelector('#joke');
+        const jokebtn = document.querySelector('#jokebtn');
+        // const url = "https://v2.jokeapi.dev/joke/Any?blacklistFlags=nsfw,religious,political,racist,sexist,explicit&type=single";
+
+    //    here we will create a api 
+
+        let generateJokes = () =>{
+            const setHeader = {
+                headers:{
+                    Accept : "application/json"
+                }
+            }
+            fetch('https://icanhazdadjoke.com' , setHeader)
+            .then((res) => res.json())
+            .then((data) =>{
+                jokes.innerHTML = data.joke;
+            }).catch((error)=>{
+                console.log(error);
+                
+            })
+            
+        }
+        
+        jokebtn.addEventListener('click',generateJokes);
+        generateJokes();
+        
+    </script>
+</body>
+</html>
