@@ -79,6 +79,23 @@ section {
   -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
           box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
 }
+@keyframes animation{
+  0%{
+    color: darkblue;
+  }
+  30%{
+   color: darkgreen;
+  }
+  60%{
+   color: darkred;
+  }
+  90%{
+   color: darkviolet;
+  }
+  100%{
+    color: darkcyan;
+  }
+}
 
 .header .logo {
   margin-right: auto;
@@ -91,6 +108,7 @@ section {
   border-bottom-right-radius: 35px;
   /* border-color: #219150; */
   font-weight: bolder;
+   animation: animation 1.5s linear infinite;
 }
 
 .header .logo i {
