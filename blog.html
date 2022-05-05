@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  font-family: Arial;
+  padding: 20px;
+  background: #f1f1f1;
+}
+@keyframes animation{
+  0%{
+    color: darkblue;
+  }
+  30%{
+   color: darkgreen;
+  }
+  60%{
+   color: darkred;
+  }
+  90%{
+   color: darkviolet;
+  }
+  100%{
+    color: darkcyan;
+  }
+}
+
+/* Header/Blog Title */
+.header {
+  padding: 10px;
+  font-size: 40px;
+  text-align: center;
+  color: lightskyblue;
+  text-shadow: 2px 2px 0.5px rgba(255, 255, 255, 0.7);
+  animation: animation 1.5s linear infinite;
+
+  /* background-color: #67b96a; */
+  /* background-image: linear-gradient(to bottom,red,green,yellow,aqua); */
+}
+
+/* Fake image */
+.fakeimg {
+  background-color: rgb(26, 135, 26);
+  width: 100%;
+  height:300px;
+  position: relative;
+  background-image: url(mouse.jpg),url(mouse_2.jpg),url(mouse_2.jpg);
+  /* background-repeat: no-repeat; */
+  background-size: 20rem;
+ 
+}
+.fakeimg_1 {
+  background-color: #aaa;
+  width: 100%;
+  height: 450px;
+  background-image: url(mouse_3.jpg);
+  /* background-repeat: no-repeat; */
+  background-size: 25rem;
+  background-origin: padding-box;
+}
+.fakeimg_2 {
+  background-color: #aaa;
+  width: 100%;
+  height:500px;
+  position: relative;
+  background-image: url(mouse_2.jpg),url(mouse_3.jpg),url(mouse_2.jpg);
+  /* background-repeat: no-repeat; */
+  background-size: 10rem;
+}
+
+/* Add a card effect for articles */
+.card h1 {
+  background-color: slategray;
+  padding: 20px;
+  margin-top: 20px;
+  text-align: center;
+  
+}
+.card h2{
+  color: darkblue;
+}
+.card a:hover{
+  text-decoration-line: none;
+  pointer-events: all;
+  cursor: progress;
+  color: red;
+}
+.cardImg {
+  margin-top: 10px;
+  width: 100%;
+}
+@keyframes animate{
+  0%{
+    opacity: 0;
+  }
+  50%{
+    opacity: 0.7;
+  }
+  100%{
+    opacity: 0;
+  }
+}
+.cardImg h1{
+  color: blue;
+  text-align: center;
+  animation: animate 1.5s linear infinite;
+}
+.cardImg .img{
+  display: flex;
+  background-image: linear-gradient(to right,black,red,green);
+  width: 100%;
+ 
+}
+.img img{
+  display: block;
+  overflow: hidden;
+  /* width: 100%; */
+  width: 500px;
+  padding: 20px;
+  height: 400px;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+  margin-top: 20px;
+  background-image: linear-gradient(to right,red,blue,yellow);
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {
+    width: 100%;
+    padding: 0;
+  }
+  .img img{
+  display: block;
+  overflow: hidden;
+  width: 100%;
+  width: 180px;
+  padding: 0 20px 0 2px;
+  height: 250px;
+}
+
+}
+</style>
+</head>
+<body>
+<div class="header">
+  <h2><marquee>Gaming Mouse</marquee></h2>
+</div>
+
+<!-- finishing here you can check it for all function -->
+<div class="row">
+  <div class="leftcolumn">
+    <div class="card">
+     <h2>Mouse</h2>
+      <h5>Mouse description, May 5, 2022</h5>
+      <div class="fakeimg">
+        Mouse
+      </div>
+      <p>The best computer mouse allows you to place your cursor, drag and drop, and perform other critical functions while using spreadsheets or accurately aim down scope at your enemy. Choosing the right computer mouse can boost your productivity and help avoid missed deadlines. When making our selections we focused on wired vs. wireless, DPI, (measurement of mouse sensitivity) ergonomics, connectivity and design. We also noted auxiliary features such as embedded buttons, battery life, and built-in lighting. And, if you want more great PC mice recommendations, then read our best computer mouse guide.</p>
+    </div>
+    <div class="card">
+      <h2>Mouse and Keyboard</h2>
+      <h5>wireless description, May 5, 2022</h5>
+      <div class="fakeimg_1" style="height:200px;">Keyboard</div>
+      <p>After more than 15 hours of research and testing, our top pick goes to the VicTsing MM057 2.4G Wireless Mouse. This budget mouse offers cursor sensitivity options from 800 to 2400 DPI, as well as a beautifully designed arc and thumb rest, side pits for support, an anti-slip rubber scroll wheel, and 15-hour battery life. It is also very durable, with no flimsy bottom panels or rubber components scuffing and falling off over time. A top plastic matte finish also prevents sweaty palms and keeps grips comfortable. Keep reading to learn more about the VicTsing MM057 2.4G Wireless Mouse and six other computer mice that met our strict grading criteria.</p>
+    <h3>Keyboard</h3>
+    <p>A gaming keypad is a small, auxiliary keyboard designed only for gaming. It has a limited number of the original keys from a standard keyboard, and they are arranged in a more ergonomic fashion to facilitate quick and efficient gaming key presses. The commonly used keys for gaming on a computer are the 'W', 'A', 'S', 'D', and the keys close and adjacent to these keys. These keys and style of using a keyboard is referred to as WASD. A gaming keypad will not only optimize the WASD layout, but will often contain extra functionality, such as volume control, the Esc. key, and the F1–F12 key.</p>
+    </div>
+
+    <div class="card">
+      <h2>Fancinated Mouse</h2>
+      <div class="fakeimg_2" style="height:100px;">Gaming</div>
+      <p>Wireless connection is by 2.4GHz signal via included USB stick receiver and boasts a range of 33 ft. This budget wireless mouse runs on a pair of AA batteries giving up to a 2-year battery life. However, the batteries are not rechargeable and there’s no option to use it as a wired mouse. This computer mouse does support Chrome OS devices, a plus for Chromebook users. You may also want to upgrade to one of the best computer monitors as well. <br><br>
+        This wired mouse for gaming also offers adjustable DPI and sampling rates so you can fine tune the level of precision and speed balance. DPI settings range from 500 all the way to 7200, much higher than many value-minded general purpose mice. It also has backlighting which you can set to virtually any color. The best computers need the best mouse
+      </p>
+    </div>
+    <div class="cardImg">
+      <h1>Gaming Mouse And Keyboard</h1>
+      <div class="img" ><img src="mouse.jpg" alt="">
+      <img src="mouse_2.jpg" alt="">
+     <img src="mouse_3.jpg" alt="">
+    </div>
+    </div>
+    <div class="card">
+      <h1>view video for more inforamation</h1>
+      <p>life  without gaming is nothing , friends play the game and enjoy . The elders have said that the game is what keeps the body fit and strong and keeps life happy. <br><br>watch video to how to play game<a href="http://youtu.be/96G5y_znKr0" target="_blank" rel="noopener noreferrer" style="text-decoration-line: none;"> Click Me</a> </p>
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  <h2>Thanks for Visiting</h2>
+</div>
+</body>
+</html>
